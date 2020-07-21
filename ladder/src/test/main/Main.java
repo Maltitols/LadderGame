@@ -7,9 +7,10 @@ import java.io.InputStreamReader;
 public class Main {
 	public static void main(String[] args) throws IOException {
 		BufferedReader reader=new BufferedReader(new InputStreamReader(System.in));
-		String inputStr;
-		int inputNum;
-		int[][] ladder=new int[11][7];
+		String inputStr;	//입력받은 문자열
+		int inputNum;		
+		int[][] ladder=new int[11][7];	//사다리 정보 Array. 0번 row, column은 더미.
+		//사다리 정보 입력
 		System.out.println("사다리 정보를 입력하세요(x는 입력 완료).");
 		for(int i=0;i<60;i++) {
 			inputStr=reader.readLine();
@@ -22,6 +23,7 @@ public class Main {
 				ladder[ladderRow][ladderCol]=1;
 			}
 		}
+		//사다리 게임
 		System.out.println("사다리 게임을 시작할 출발 지점을 입력하세요(x는 입력 완료).");
 		while((inputStr=reader.readLine())!=null) {
 			if(inputStr.equals("x")) break;
